@@ -1,0 +1,147 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Titillium Web', sans-serif;
+}
+body{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+.container{
+	width: 400px;
+	margin: 20px auto;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+	border-radius: 15px 15px 0 0;
+}
+.header{	
+	width: 100%;
+	height: 200px;
+	background: url("../imgs/pic8.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 15px 15px 0 0;
+	position: relative;
+}
+.clear{
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	right: 20px;	
+	top: 20px;
+}
+.clear .clear-icon{
+	color: #6eb200;
+	font-size: 25px;
+}
+.clear .clear-icon:hover{
+	cursor: pointer;
+	text-shadow: 1px 3px 5px #000;
+	transform: rotate(45deg);
+}
+#date{		
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	color: #fff;
+	font-size: 25px;
+}
+.content{
+	width: 100%;
+	height: 400px;
+	background: #fff;
+	overflow: auto;
+	scrollbar-width: none; 
+	-ms-overflow-style: none;
+}
+.content::-webkit-scrollbar{
+	display: none; 
+}
+.add-to-do{
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	width: 100%;
+	background-color: #fff;
+	padding: 15px;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.add-to-do .add-icon{
+	font-size: 30px;
+	color: #4162f6;
+}
+.add-to-do input{
+	width: 330px;
+	margin-left: 5px;
+	font-size: 18px;
+	padding: 5px 10px 5px 10px; 
+	background: transparent;
+	border: none;
+	outline: none;
+	text-transform: capitalize;		
+}
+.add-to-do input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+   	color: #4162f6;
+   	font-family: 'Titillium Web', sans-serif;
+  	font-size: 20px;
+}
+.add-to-do input::-moz-placeholder { /* Firefox 19+ */
+    color: #4162f6;
+   	font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+
+.add-to-do input:-ms-input-placeholder { /* IE 10+ */
+    color: #4162f6;
+    font-family: 'Titillium Web', sans-serif;
+   	font-size: 20px;
+}
+
+.add-to-do input:-moz-placeholder { /* Firefox 18- */
+    color: #4162f6;
+   	font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+
+.item{
+	list-style-type: none;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	font-size: 18px;
+	padding: 10px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.text{
+	width: 340px;
+	padding-left: 10px;
+	text-transform: capitalize;
+}
+
+.delete-icon:hover{
+	color: red;
+	cursor: pointer;
+}
+
+.circle-icon{
+	cursor: pointer;	
+}	
+
+.check-icon{
+	color:#6eb200;
+	animation: check 0.5s ease;
+	cursor: pointer;
+}
+
+.check-icon + p{
+	text-decoration: line-through;
+}
+
+@keyframes check{
+	from{
+		transform: scale(0);
+	}to{
+		transform: scale(1);
+	}
+}
